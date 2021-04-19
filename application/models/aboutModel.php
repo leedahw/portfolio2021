@@ -9,9 +9,6 @@ class aboutModel extends CI_Model {
 	}
 
   function fetchAbout(){
-    $query = $this->db->get("about");
-    //SELECT * FROM `works`
-    return $query;
-    console.log($query);
+    echo "hello about";
   }
 }

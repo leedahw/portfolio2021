@@ -50,22 +50,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
     <!-- BORDERS Do not touch-->
-    <div class="outline" id=""></div>
-    <nav>
-        <a href="#" class="logo sunflora">ADL</a>
-        
-        <ul class="navbar-links">
-            <li><a href='HomepageController'>Home</a></li>
-            <li><a href='aboutController' class="active">About</a></li>
-            <li><a href='resumeController'>Resume</a></li>
-            <li><a href='contactController'>Contact</a></li>
-        </ul>
+    <div class="borderFrame outline" id=""></div>
+    <nav class="navbar">
+        <input type="checkbox" class="navCheckbox" id="navCheckbox">
+            <label for="navCheckbox" class="navToggle">
+                <i class="fas fa-bars" id="menu"></i>
+                <i class="fas fa-times" id="close"></i>
+            </label>
+              <ul class="navbar-links">
+                <li><a href="#" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
+                <li><a href="<?php echo base_url();?>">Home</a></li>
+                <li><a href='aboutController' class="active">About</a></li>
+                <li><a href='resumeController'>Resume</a></li>
+                <li><a href='<?php echo base_url();?>contactController'>Contact</a></li>
+              </ul>
     </nav>
 
     <main>
-        <h1 class="sunflora">Hi I'm Alana</h1>
+        <div class="introduction">
+            <h1 class="sunflora">Hi, <span class="desktopHide"><br/></span>I'm <span class="purple">Alana!</span></h1>
+
     </main>
+    <footer>
 
+    </footer>
 </body>
-
 </html>

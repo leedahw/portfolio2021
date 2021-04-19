@@ -1,0 +1,520 @@
+/*COLOR VARIABLES*/
+/*MODULARSCALE VARIABLE*/
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/*COLOR VARIABLES*/
+/*MODULAR SCALE VARIABLE need plgin*/
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+@font-face {
+  /*title*/
+  font-family: sunflora;
+  src: url("../fonts/Sunflora.otf");
+  font-weight: bold;
+}
+/*body*/
+/*GENERAL DOCWEB STYLES*/
+html, body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 140%;
+  color: #323232;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 1.777em;
+}
+
+a {
+  text-decoration: none;
+  color: #00000099;
+}
+
+i {
+  width: 24px;
+  color: #2a1150;
+}
+
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+/*class-based styling*/
+.sunflora {
+  font-family: sunflora;
+  line-height: 140%;
+}
+
+.purple {
+  color: #6C4CB3;
+}
+
+.brightyellow {
+  color: #f7c92a;
+}
+
+.sub-headline {
+  margin-top: 1em;
+  font-size: 14pt;
+}
+
+.flex-display-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.outline {
+  border: 2px solid blue;
+}
+
+/*coming soon page*/
+#coming-soon-text {
+  margin: auto;
+  margin-top: 25vh;
+  width: fit-content;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  line-height: 0.1em;
+}
+
+/*id-based styling*/
+#see-you-text {
+  margin-top: 2em;
+  font-weight: 400;
+}
+
+#coming-soon-heading {
+  margin-left: 1.5em;
+  font-weight: bold;
+}
+
+#coming-soon-img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  width: 500px;
+  z-index: -1;
+  transform: rotate(-3deg);
+}
+
+#sns-icons {
+  margin-top: 1rem;
+  color: #2a1150;
+  width: 50px;
+}
+
+/*BORDERFRAME CSS*/
+#border-frame {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-top: 0px !important;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  pointer-events: none;
+  z-index: 9;
+  background-color: transparent;
+  border-width: 14px;
+  border-style: solid;
+  border-color: #fbf2d4;
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+}
+
+/*projectthumbnail*/
+.projectDiv img {
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+  /*LOGO NAME*/
+  font-family: sunflora;
+  src: url("https://www.alanalee.me/fonts/Sunflora.otf");
+  font-weight: bold;
+}
+@font-face {
+  /*title*/
+  font-family: sf-ui;
+  src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+}
+/*body*/
+/*BORDER FRAME*/
+#border-frame {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-top: 0px !important;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  pointer-events: none;
+  z-index: 9;
+  background-color: transparent;
+  border-width: 14px;
+  border-style: solid;
+  border-color: #fbf2d4;
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+}
+
+@media (max-width: 650px) {
+  #border-frame {
+    display: none;
+  }
+}
+/*UNIVERSAL*/
+html, body {
+  font-size: 18px;
+  line-height: 140%;
+  color: #323232;
+  margin: auto;
+  background-color: #fff;
+}
+
+@media (min-width: 980px) {
+  body {
+    margin: auto;
+    vertical-align: middle;
+  }
+
+  main {
+    width: 55%;
+    margin: 1.777rem auto;
+  }
+}
+.max-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1090px) {
+  body {
+    margin: auto;
+    vertical-align: middle;
+  }
+
+  main {
+    width: 75%;
+    margin: 1.77rem auto;
+  }
+
+  .outer-max-flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*TABLET BASED TWO COLUMN WIDTH*/
+@media (min-width: 980px) {
+  .max-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .max-flex > div {
+    margin-right: 5rem;
+    padding: 1.777em;
+    padding: 0px;
+  }
+
+  .max-flex > div#skills {
+    margin-right: 0px !important;
+  }
+
+  .max-flex#education {
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  .max-flex#education > div {
+    margin-right: 5rem;
+  }
+}
+/*END OF TABLET-BASED 2 COLUMN LAYOUT*/
+/*START MEDIA QUERY FOR DESKTOP*/
+@media (min-width: 1090px) {
+  #name {
+    font-size: 4.209em;
+  }
+
+  #outer-max-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .desktop-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .desktop-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .max-flex {
+    flex-direction: column;
+  }
+
+  #education-section {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #personal-information {
+    margin-top: 2rem;
+  }
+
+  #blank {
+    display: none;
+  }
+
+  #rm-mb {
+    margin-bottom: 0px !important;
+  }
+
+  .extra-pb {
+    padding-bottom: 4rem;
+  }
+}
+/*END OF DESKTOP MEDIA QUERY FOR TWO COLUMN*/
+/*EXTRA WIDE DESSKTOP MEDIA QUERY*/
+@media (min-width: 1800px) {
+  main {
+    width: 55%;
+    margin: 1.77rem auto;
+  }
+}
+/*END OF EXTRA WIDE DESKTOP QUERY*/
+a, p, li {
+  display: flex;
+  align-content: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  color: #323232;
+}
+
+li {
+  display: list-item;
+}
+
+h1 {
+  font-size: 5.61em;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+  color: #323232;
+  font-size: 18px;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  font-size: 1em;
+  font-weight: 500;
+  color: #9b9da8;
+  margin-top: 0.25em;
+}
+
+div {
+  margin-top: 1em;
+}
+
+.section-title {
+  font-family: sf-ui;
+  font-weight: 600;
+  color: #2a1150;
+}
+
+h2.section-title {
+  margin-top: 1.3rem;
+  margin-bottom: 0px;
+}
+
+h3.section-title {
+  margin-bottom: 0.5rem;
+}
+
+/*ABOUT SECTION*/
+.about-text {
+  line-height: 160%;
+}
+
+/*FOOTER*/
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.75em;
+  vertical-align: middle;
+}
+
+footer > span {
+  font-family: sf-ui;
+  color: #2a1150;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13.5px;
+  margin: auto;
+}
+
+footer > div {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 13.5px;
+  margin-bottom: 0px;
+  vertical-align: center;
+}
+
+footer > div > a {
+  position: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer > div > a > i {
+  font-size: 1.3em;
+}
+
+.content-wrapper {
+  margin: 1.3em;
+}
+
+/*MARGIN OVERRIDES*/
+.no-mb {
+  margin-bottom: 0 !important;
+}
+
+.sm-mb {
+  margin-bottom: 0.75em !important;
+}
+
+.no-mt {
+  margin-top: 0 !important;
+}
+
+.extra-mt {
+  margin-top: 2.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+a:link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#contact > a:link > i {
+  margin-right: 0.75rem;
+}
+
+a:active {
+  color: #5b5b5b;
+}
+
+p.list {
+  margin-top: 0;
+}
+
+.job-list {
+  margin-left: -1rem;
+}
+
+#tagline {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+#name {
+  font-family: sunflora;
+  color: #2a1150;
+  line-height: 100%;
+  margin-left: 1.3rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0px;
+}
+
+#competency-list {
+  margin-left: -1rem;
+  margin-bottom: 1em;
+}
+
+/*COLOR CLASS*/
+.bg-yellow {
+  background-color: #fbf2d4;
+}
+
+.purple {
+  color: #2a1150;
+}
+
+/*BORDERS*/
+.border {
+  background-color: #fbf2d4;
+  z-index: 200;
+}
+
+.border-left {
+  left: 0px;
+  width: 8px;
+}
+
+/*background MEDIA QUERIES*/
+@media (min-width: 600px) {
+  html {
+    background: white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

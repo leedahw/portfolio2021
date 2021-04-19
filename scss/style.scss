@@ -1,0 +1,405 @@
+@use './main';
+
+/*COLOR VARIABLES*/
+$black: #323232;
+$grey: #5b5b5b;
+$lightgrey: #9b9da8;
+$purple: #2a1150;
+$lightyellow: #fbf2d4;
+$white: #fff;
+
+
+/*MODULAR SCALE VARIABLE need plgin*/
+
+/*FONTS*/
+  @font-face { /*LOGO NAME*/
+    font-family: sunflora;
+    src: url("https://www.alanalee.me/fonts/Sunflora.otf");
+    font-weight: bold;
+  }
+
+  @font-face { /*title*/
+    font-family: sf-ui;
+    src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+  }
+
+  /*body*/
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+/*BORDER FRAME*/
+#border-frame {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-top: 0px!important;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  pointer-events: none;
+  z-index: 9;
+  background-color: transparent;
+  border-width: 14px;
+  border-style: solid;
+  border-color: $lightyellow;
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+}
+
+
+@media (max-width: 650px) {
+  #border-frame {
+    display:none;
+  }
+}
+
+/*UNIVERSAL*/
+  html, body {
+    font-size: 18px;
+    line-height: 140%;
+    color:$black;
+    margin: auto;
+    background-color: $white;
+  }
+
+  @media (min-width:980px) {
+    body {
+      margin: auto;
+      vertical-align: middle;
+    }
+    
+    main {
+      width: 55%;
+      margin: 1.777rem auto;
+    }
+  }
+
+  .max-flex {
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  @media (min-width:1090px) {
+    body {
+      margin:auto;
+      vertical-align: middle;
+    }
+
+    main {
+      width: 75%;
+      margin: 1.77rem auto;
+    }
+
+    .outer-max-flex {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /*TABLET BASED TWO COLUMN WIDTH*/
+  @media (min-width: 980px) {
+    .max-flex {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .max-flex>div {
+      margin-right: 5rem;
+      padding: 1.777em;
+      padding: 0px;
+    }
+
+    .max-flex>div#skills {
+      margin-right: 0px!important;
+    }
+
+    .max-flex#education {
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+    }
+
+    .max-flex#education>div {
+      margin-right: 5rem;
+    }
+  }
+
+  /*END OF TABLET-BASED 2 COLUMN LAYOUT*/
+
+
+  /*START MEDIA QUERY FOR DESKTOP*/
+  @media (min-width: 1090px) {
+    #name {
+      font-size: 4.209em;
+    }
+
+    #outer-max-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .desktop-left-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    .desktop-right-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    .max-flex {
+      flex-direction: column;
+    }
+
+    #education-section {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    #personal-information {
+      margin-top: 2rem;
+    }
+
+    #blank {
+      display: none;
+    }
+
+    #rm-mb {
+      margin-bottom: 0px!important;
+    }  
+
+    .extra-pb {
+      padding-bottom: 4rem;
+    }
+  }
+
+  /*END OF DESKTOP MEDIA QUERY FOR TWO COLUMN*/
+  /*EXTRA WIDE DESSKTOP MEDIA QUERY*/
+  @media (min-width: 1800px) {
+    main {
+      width: 55%;
+      margin: 1.77rem auto;
+    }
+  }
+  /*END OF EXTRA WIDE DESKTOP QUERY*/
+
+  a, p, li {
+    display: flex;
+    align-content: center;
+    font-family: Montserrat,sans-serif;
+    font-size: 1em;
+    margin-bottom: 0.75em;
+    color: $black;
+  }
+
+  li {
+    display: list-item;
+  }
+
+  h1 {
+    font-size:5.61em;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-family: Montserrat,sans-serif;
+    color: $black;
+    font-size: 18px;
+    margin-bottom: .25rem;
+  }
+
+  .date {
+    font-size: 1em;
+    font-weight: 500;
+    color: $lightgrey;
+    margin-top:0.25em;
+
+  }
+  div {
+    margin-top: 1em;
+  }
+
+  .section-title{
+    font-family: sf-ui;
+    font-weight: 600;
+    color: $purple;
+  }
+
+  h2.section-title {
+      margin-top: 1.3rem;
+      margin-bottom: 0px;
+  }
+
+  h3.section-title {
+      margin-bottom:.5rem;
+  }
+
+  /*ABOUT SECTION*/
+  .about-text {
+    line-height: 160%;
+  }
+
+  /*FOOTER*/
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    padding:.75em;
+    vertical-align: middle;
+    
+  }
+
+  footer>span {
+    font-family: sf-ui;
+    color: $purple;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13.5px;
+    margin: auto;
+  }
+
+  footer>div {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 13.5px;
+    margin-bottom:0px;
+    vertical-align: center;
+  }
+
+  footer>div>a {
+    position: inherit;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  footer>div>a>i {
+    font-size: 1.3em;
+  }
+
+  .content-wrapper {
+    margin: 1.3em;
+  }
+
+
+  /*MARGIN OVERRIDES*/
+  .no-mb {
+      margin-bottom: 0!important;
+  }
+
+  .sm-mb {
+    margin-bottom: .75em!important;
+  }
+
+  .no-mt {
+      margin-top: 0!important;
+  }
+
+  .extra-mt {
+    margin-top: 2.5rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a:link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #contact>a:link>i {
+    margin-right: .75rem;
+  }
+
+  a:active {
+    color: $grey
+  }
+
+  p.list {
+      margin-top: 0;
+  }
+
+  
+  .job-list {
+    margin-left: -1rem;
+  }
+
+  #tagline {
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    margin-top:0;
+    margin-bottom:0.75rem;
+  }
+
+  #name {
+    font-family: sunflora;
+    color: $purple;
+    line-height: 100%;
+    margin-left: 1.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0px;
+  }
+
+  #competency-list {
+    margin-left: -1rem;
+    margin-bottom: 1em;
+  }
+
+/*COLOR CLASS*/
+  .bg-yellow {
+    background-color: $lightyellow;
+  }
+
+  .purple {
+    color:$purple;
+  }
+
+/*BORDERS*/
+  .border {
+    background-color: $lightyellow;
+    z-index: 200;
+  }
+  .border-left {
+    left:0px;
+    width: 8px;
+
+  }
+
+/*background MEDIA QUERIES*/
+@media (min-width: 400px) {
+
+}
+
+
+@media (min-width: 600px) {
+  html { background: white; }
+}
+
+@media (min-width: 960px) {
+
+}

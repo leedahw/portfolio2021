@@ -330,7 +330,7 @@ main.contacts {
   flex-direction: column;
 }
 main.contacts .leftColumn {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 main.contacts .leftColumn .formContainer {
   margin-top: 8rem;

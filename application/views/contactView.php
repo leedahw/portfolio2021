@@ -111,6 +111,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script>
 // ajax call 
 let responseData;
+let messageDiv = $('<div>');
+let messageP = $('<p>');
+let messageSpan = $('<span>');
 $(document).ready(()=>{
     $('#contactBtn').on('click', (e)=>{
         e.preventDefault();
@@ -132,6 +135,13 @@ $(document).ready(()=>{
                     responseData = JSON.parse(responseData);
                     if(responseData.statusCode==200) {
                         $('#responseDiv').html('<p id="success">Thanks so much!!</p>');
+                        //add inpt value into variables
+                        messageP.append(document.createTextNode(name));
+                        messageSpan.append(document.createTextNode(message));
+                        //append new success input into messagesDiv
+                        $('.messagesContainer').append(messageDiv);
+                        messageDiv.append(messageP);
+                        messageDiv.append(messageSpan);
                     } else if (responseData.statusCode ==201) {
                         $('#responseDiv').html('<p id="error">Please try again..</p>');
                     }

@@ -74,16 +74,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="formContainer">
-                <!-- <form id="#contact-form" method="post" action=""> -->
-                <?php echo form_open(base_url('/contactController/submit'), array('class'=> 'contactForm'));?>
+                <form id="#contact-form" method="post" action="<?php base_url('/contactController/submit')?>">
                     <input type="text" name="name" id="name" placeholder="Name" />
                     <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" />
                     <input type="text" name="message" id="message" placeholder="Drop me a line!" />
                     
-                    <span id="error_message"></span>
-                    <button type="submit">Send</button>
-                <?php echo form_close(); ?>
-                <!-- </form>   -->
+                    <span id="message_div"></span>
+                    <button id="contactBtn" type="submit">Send</button>
+                </form>  
             </div>
         </div>
 
@@ -112,25 +110,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
 <script>
 // ajax call 
-
+let responseData;
 $(document).ready(()=>{
-    $('.contactForm').on('submit', (e)=>{
+    $('#contactBtn').on('click', (e)=>{
         e.preventDefault();
+        let name = $('#name').val();
+        let emailAddress = $('#emailAddress').val();
+        let message = $('#message').val();
+        if(name!="" && emailAddress!="" && message!=""){
+            $.ajax({
+                url:'<?php echo base_url('/contactController/submit')?>',
+                type:"post",
+                data:{
+                    type:1,
+                    name:name,
+                    emailAddress: emailAddress,
+                    message: message
+                },
+                cache:false,
+                success: function(responseData){
+                    responseData = JSON.parse(responseData);
+                    if(responseData.statusCode==200) {
+                        alert('success');
+                    } else if (responseData.statusCode ==201) {
+                        alert("error!");
+                    }
+                }
+            })
+        }else{
+            alert('Please input all fields');
+        }
+    })
 
-        let contactForm = $(this);
-        $.ajax({
-            url:'http://localhost/portfolio2021/index.php/contactController/submit',
-            type:'post',
-            data: contactForm.serialize(),
-        }).done((response)=>{
-            console.log(response);
-            if(response.status =='success') {
-                $('#error_message').html(data);
-            }
-        });
-    });
+
 });
-
 </script>
 </body>
 </html>

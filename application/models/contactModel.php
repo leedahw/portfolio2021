@@ -8,15 +8,19 @@ class contactModel extends CI_Model {
 		$this->load->database();
 	}
 
-  function insertContact($data) {
-    $this->db->insert("contact", $data);
-    return $this->db->insert_id();
+  public function insertContact($name,$emailAddress,$message)
+  {
+      $query ="INSERT INTO `contact` (`name` , `emailAddress` , `message`)
+      VALUES ('$name' , '$emailAddress' , '$message')";
+      
+      $this->db->query($query);
   }
 
-  function fetchContact(){
+  public function fetchContact(){
     return $contacts = $this->db->query('select * from contact')->result_array();
     
     return $contacts;
   }
 }
 
+?>

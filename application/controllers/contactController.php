@@ -25,35 +25,52 @@ class contactController extends CI_Controller {
 	}
 
 
-
 	public function submit (){
-		//load library
-		$this->load->library('form_validation');
-		//set validation rules
-		$this->form_validation->set_rules('name', 'Your Name', 'trim|required');
-		$this->form_validation->set_rules('emailAddress', 'Email Address', 'trim|required|valid_email');
-		$this->form_validation->set_rules('message' , 'Message', 'trim|required');
+		if($this->input->post('type')==1){
 
-		if($this->form_validation->run()==TRUE){
-			//if true -> get POST data
-			$data = array(
-				'name'=> $this->input->post('name', true),
-				'emailAddress'=>$this->input->post('emailAddress', true),
-				'message'=> $this->input->post('message',true)  
-			);
-
-			$id= $this->contactModel->insertContact($data);
-
-			echo '<p id="success">Thanks So Much!</p>';
-		}else{
-			//failure
-			$response = array(
-				'status'=> 'error',
-				'message'=> '<p id="danger">Please Try Again.</p>'
-			);
-
-			echo $response['message'];
+			$name= $this->input->post('name');
+			$emailAddress = $this->input->post('emailAddress');
+			$message = $this->input->post('message');
+			$this->contactModel->insertContact($name,$emailAddress,$message);
+			echo json_encode(array(
+				"statusCode"=>200
+			));
 		}
-
 	}
+
+
+	// public function submit (){
+	// 	//load library
+	// 	$this->load->library('form_validation');
+	// 	//set validation rules
+	// 	$this->form_validation->set_rules('name', 'Your Name', 'required');
+	// 	$this->form_validation->set_rules('emailAddress', 'Email Address', 'trim|required|valid_email');
+	// 	$this->form_validation->set_rules('message' , 'Message', 'required');
+
+	// 	if ($this->form_validation->run() == false) {
+	// 		$response = array(
+	// 				'status' => 'error',
+	// 				'message' => validation_errors()
+	// 		);
+	// 	}else{
+	// 		$contactData = array(
+	// 				'name' => $this->input->post('name', true),
+	// 				'emailAddress' => $this->input->post('emailAddress', true),
+	// 				'message' => $this->input->post('message', true),
+	// 		);
+
+	// 		$contactId = $this->page_model->insertContact($contactData);
+
+	// 		$response = array(
+	// 				'status' => 'success',
+	// 				'message' => "<h3>Message send successfully.</h3>"
+	// 		);
+	// 	}
+		
+	// 	$this->output
+	// 		->set_content_type('application/json')
+	// 		->set_output(json_encode($response));
+
+	// }
 }
+?>

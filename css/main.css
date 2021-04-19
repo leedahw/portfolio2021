@@ -379,11 +379,11 @@ main.contacts .leftColumn .formContainer form button {
   }
 }
 
-#error_message #success {
+#responseDiv p#success {
   font-size: 14px;
   color: #6C4CB3;
 }
-#error_message #danger {
+#responseDiv p#danger {
   font-size: 14px;
   color: #c94966;
 }

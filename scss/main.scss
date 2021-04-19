@@ -418,13 +418,13 @@ main.contacts{
     }
 }
 
-#error_message {
-    #success {
+#responseDiv {
+    p#success {
         font-size:14px;
         color: $mainpurple;
     }
 
-    #danger {
+    p#danger {
         font-size:14px;
         color: #c94966;
     }

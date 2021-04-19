@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" />
                     <input type="text" name="message" id="message" placeholder="Drop me a line!" />
                     
-                    <span id="message_div"></span>
+                    <span id="responseDiv"></span>
                     <button id="contactBtn" type="submit">Send</button>
                 </form>  
             </div>
@@ -131,14 +131,14 @@ $(document).ready(()=>{
                 success: function(responseData){
                     responseData = JSON.parse(responseData);
                     if(responseData.statusCode==200) {
-                        alert('success');
+                        $('#responseDiv').html('<p id="success">Thanks so much!!</p>');
                     } else if (responseData.statusCode ==201) {
-                        alert("error!");
+                        $('#responseDiv').html('<p id="error">Please try again..</p>');
                     }
                 }
             })
         }else{
-            alert('Please input all fields');
+            $('#responseDiv').html('<p id="error">Please fill in all the fields.</p>');
         }
     })
 

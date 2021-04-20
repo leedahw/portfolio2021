@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
   <?php $this->load->view('headerView.php');?>
+  <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
@@ -19,9 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <ul class="navbar-links">
               <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
                 <li><a href="<?php echo base_url();?>" class="active">Home</a></li>
-                <li><a href='<?php echo base_url();?>aboutController'>About</a></li>
-                <li><a href='<?php echo base_url();?>resumeController'>Resume</a></li>
-                <li><a href='<?php echo base_url();?>contactController'>Contact</a></li>
+                <li><a href='<?php echo base_url();?>about'>About</a></li>
+                <li><a href='<?php echo base_url();?>resume'>Resume</a></li>
+                <li><a href='<?php echo base_url();?>contact'>Contact</a></li>
               </ul>
     </nav>
 
@@ -40,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 //fetchWorks here & repeat for each in db
                 foreach($wrk as $key=>$project){?>
                     <div  class='projectDiv outline'>
-                      <a href="#"class="">
+                      <a href="<?php echo $project['url']?>"class="">
                         <img class="projectThumbnail" src="http://localhost/portfolio2021/images/projects/<?php echo $project['thumbnail']?>" alt="project thumbnail"/>
                         <div>
                             <h3 class="projectTitle"><?php echo $project['name']?></h3>

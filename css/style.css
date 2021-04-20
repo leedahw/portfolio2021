@@ -43,6 +43,14 @@ a {
   color: #00000099;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
 i {
   width: 24px;
   color: #6C4CB3;
@@ -98,6 +106,10 @@ main {
 
 .outline {
   border: 2px solid blue;
+}
+
+.mockup {
+  background-color: #f8f8f8;
 }
 
 .underline {
@@ -498,7 +510,7 @@ main.contacts .leftColumn .formContainer form button {
 /*FOOTER*/
 footer {
   background-color: #f8f8f8;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -533,6 +545,84 @@ footer div a {
 }
 footer div a i {
   font-size: 1.3em;
+}
+
+/*PROJECT PAGE*/
+.projectFull {
+  padding-left: 0;
+  padding-right: 0;
+}
+.projectFull .projectBanner {
+  position: relative;
+  margin: 5rem 0 0 0;
+  padding: 0;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectFull .projectBanner img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+.projectFull .projectBanner h1 {
+  width: 100%;
+  font-family: sf-ui;
+  font-size: 2rem;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 780px) {
+  .projectFull {
+    padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .projectFull {
+    padding: 0 7rem;
+  }
+}
+
+.projectSpecs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  font-size: 14px;
+  margin-bottom: 5rem;
+}
+.projectSpecs ul {
+  width: 100%;
+}
+.projectSpecs ul li {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+@media only screen and (min-width: 850px) {
+  .projectSpecs ul li {
+    display: inline-block;
+  }
+}
+.projectSpecs ul li h4 {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 780px) {
+  .projectSpecs ul li {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .projectSpecs ul {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .projectSpecs {
+    align-items: center;
+  }
 }
 
 @font-face {

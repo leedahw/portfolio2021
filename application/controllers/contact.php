@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class contactController extends CI_Controller {
+class contact extends CI_Controller {
 	//load helpers and libraries
 	public function __construct(){
 		parent:: __construct();

@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php $this->load->view('');?>
+  <?php $this->load->view('headerView.php');?>
+  <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
     <!-- BORDERS Do not touch-->
@@ -16,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <i class="fas fa-times" id="close"></i>
             </label>
               <ul class="navbar-links">
-              <li><a href="#" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
+              <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
                 <li><a href="<?php echo base_url();?>" class="active">Home</a></li>
                 <li><a href='<?php echo base_url();?>aboutController'>About</a></li>
                 <li><a href='<?php echo base_url();?>resumeController'>Resume</a></li>

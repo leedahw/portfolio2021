@@ -5,7 +5,7 @@
                 <i class="fas fa-times" id="close"></i>
             </label>
               <ul class="navbar-links">
-              <li><a href="#" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
+              <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
 
                 <li><a href="<?php echo base_url();?>" class="navLi">Home</a></li>
                 <li><a href='<?php echo base_url();?>aboutController' class="navLi">About</a></li>

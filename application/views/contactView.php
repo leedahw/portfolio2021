@@ -51,20 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <!-- BORDERS Do not touch-->
     <div class="borderFrame outline" id=""></div>
-    <nav class="navbar">
-        <input type="checkbox" class="navCheckbox" id="navCheckbox">
-            <label for="navCheckbox" class="navToggle">
-                <i class="fas fa-bars" id="menu"></i>
-                <i class="fas fa-times" id="close"></i>
-            </label>
-              <ul class="navbar-links">
-              <li><a href="#" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
-                <li><a href='HomepageController' >Home</a></li>
-                <li><a href='aboutController'>About</a></li>
-                <li><a href='resumeController'>Resume</a></li>
-                <li><a href='contactController'class="active">Contact</a></li>
-              </ul>
-    </nav>
+        <?php $this->load->view('navView');?>
 
     <main class="contacts">
         <div class="leftColumn">
@@ -77,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="#contact-form" method="post" action="<?php base_url('/contactController/submit')?>">
                     <input type="text" name="name" id="name" placeholder="Name" />
                     <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" />
-                    <input type="text" name="message" id="message" placeholder="Drop me a line!" />
+                    <textarea type="text" name="message" id="message" placeholder="Drop me a line!"></textarea>
                     
                     <span id="responseDiv"></span>
                     <button id="contactBtn" type="submit">Send</button>
@@ -103,57 +90,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
     </main>
 
+    <footer>
+        <?php $this->load->view('footerView');?>
+    </footer>
+
     
     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+<script src="../js/jquery-3.6.0.min.js">
 //call jQUERY for ajax
 </script>
 <script>
-// ajax call 
-let responseData;
-let messageDiv = $('<div>');
-let messageP = $('<p>');
-let messageSpan = $('<span>');
-$(document).ready(()=>{
-    $('#contactBtn').on('click', (e)=>{
-        e.preventDefault();
-        let name = $('#name').val();
-        let emailAddress = $('#emailAddress').val();
-        let message = $('#message').val();
-        if(name!="" && emailAddress!="" && message!=""){
-            $.ajax({
-                url:'<?php echo base_url('/contactController/submit')?>',
-                type:"post",
-                data:{
-                    type:1,
-                    name:name,
-                    emailAddress: emailAddress,
-                    message: message
-                },
-                cache:false,
-                success: function(responseData){
-                    responseData = JSON.parse(responseData);
-                    if(responseData.statusCode==200) {
-                        $('#responseDiv').html('<p id="success">Thanks so much!!</p>');
-                        //add inpt value into variables
-                        messageP.append(document.createTextNode(name));
-                        messageSpan.append(document.createTextNode(message));
-                        //append new success input into messagesDiv
-                        $('.messagesContainer').append(messageDiv);
-                        messageDiv.append(messageP);
-                        messageDiv.append(messageSpan);
-                    } else if (responseData.statusCode ==201) {
-                        $('#responseDiv').html('<p id="error">Please try again..</p>');
+    // ajax call 
+    let responseData;
+    let messageDiv = $('<div>');
+    let messageP = $('<p>');
+    let messageSpan = $('<span>');
+    $(document).ready(()=>{
+        $('#contactBtn').on('click', (e)=>{
+            e.preventDefault();
+            let name = $('#name').val();
+            let emailAddress = $('#emailAddress').val();
+            let message = $('#message').val();
+            if(name!="" && emailAddress!="" && message!=""){
+                $.ajax({
+                    url:'<?php echo base_url('/contactController/submit')?>',
+                    type:"post",
+                    data:{
+                        type:1,
+                        name:name,
+                        emailAddress: emailAddress,
+                        message: message
+                    },
+                    cache:false,
+                    success: function(responseData){
+                        responseData = JSON.parse(responseData);
+                        if(responseData.statusCode==200) {
+                            $('#responseDiv').html('<p id="success">Thanks so much!!</p>');
+                            //add inpt value into variables
+                            messageP.append(document.createTextNode(name));
+                            messageSpan.append(document.createTextNode(message));
+                            //append new success input into messagesDiv
+                            $('.messagesContainer').append(messageDiv);
+                            messageDiv.append(messageP);
+                            messageDiv.append(messageSpan);
+                        } else if (responseData.statusCode ==201) {
+                            $('#responseDiv').html('<p id="error">Please try again..</p>');
+                        }
                     }
-                }
-            })
-        }else{
-            $('#responseDiv').html('<p id="error">Please fill in all the fields.</p>');
-        }
-    })
+                })
+            }else{
+                $('#responseDiv').html('<p id="error">Please fill in all the fields.</p>');
+            }
+        })
 
 
-});
+    });
 </script>
 </body>
 </html>

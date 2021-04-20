@@ -17,6 +17,12 @@ $ratio: 1.333em;
   src: url("../fonts/Sunflora.otf");
   font-weight: bold;
 }
+
+@font-face { /*title*/
+    font-family: sf-ui;
+    src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+}
+
 /*body*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 $font-stack: 'Montserrat', sans-serif;
@@ -25,8 +31,9 @@ $font-stack: 'Montserrat', sans-serif;
 /*GENERAL DOCWEB STYLES*/
 
 html, body {
+    display: block;
     font-family: $font-stack;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 140%;
     color:$black;
     margin: 0;
@@ -77,6 +84,10 @@ main {
     line-height: 105%;
 }
 
+.sfui {
+    font-family: sf-ui;
+}
+
 .purple {
     color:$mainpurple;
 }
@@ -101,12 +112,19 @@ main {
     border: 2px solid blue;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .desktopHide {
     @media only screen and(min-width:760px) {
         display:none
     }
 }
 
+span.bold {
+    font-weight: 600;
+}
 
 
 /*coming soon page*/
@@ -174,6 +192,7 @@ main {
     border-image-width: 1;
     border-image-outset: 0;
     border-image-repeat: stretch;
+    z-index: 200;
     @media screen and(min-width:760px){
     
         display: block;
@@ -191,6 +210,7 @@ nav.navbar {
     top:0;
     background-color: $white;
     box-shadow: 0 2px 8px rgba($lightgrey, 0.05);
+    z-index: 1;
     
     .navCheckbox {
         display: none;
@@ -326,8 +346,39 @@ nav.navbar {
 }
 
 
+/*ABOUT PAGE*/
+.aboutDiv {
+    display: inline-block;
+    height: 100%;
+    margin-bottom: 8rem;
+    div{
+        margin-bottom: 3rem;
+
+        h2 {
+            font-family: sf-ui;
+            font-size: 1.5rem;
+            line-height: 80%;
+            margin-bottom:0;
+        }
+
+        p,a {
+            font-size:1rem;
+
+            @media only screen and (min-width:980px) {
+                width: 80%;
+            }
+        }
+    }
+    @media only screen and (min-width: 1415px) {
+        height: 50vh;
+    }
+}
+
+
+
 /*projectthumbnail*/
 .workContainer {
+    margin-bottom: 8rem;
     @media only screen and (min-width: 760px) {
         display: flex;
         flex-wrap: wrap;
@@ -352,6 +403,16 @@ nav.navbar {
         position: absolute;
         top:0.5rem;
         left:0.5rem;
+
+        h3 {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        p{
+            margin-top:0;
+        }
+
     }
     @media only screen and (min-width: 760px) {
         width:50%;
@@ -362,6 +423,7 @@ nav.navbar {
 main.contacts{
     display: flex;
     flex-direction: column;
+    margin-bottom:8rem;
     .leftColumn {
         margin-top: 15rem;
 
@@ -372,7 +434,7 @@ main.contacts{
             display: flex;
             flex-direction: column;
 
-            input {
+            input, textarea {
                 font-family: $font-stack;
                 font-weight: 400;
                 color:$black;
@@ -427,6 +489,10 @@ main.contacts{
         justify-content: space-evenly;
         align-items: center;
     }
+
+    @media only screen and (min-width: 1415px) {
+        height:100vh;
+    }
 }
 
 #responseDiv {
@@ -469,3 +535,49 @@ main.contacts{
         margin-bottom: 0;
     }
 }
+
+  /*FOOTER*/
+  footer {
+    background-color: #f8f8f8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    padding:2rem;
+    vertical-align: middle;
+    
+
+
+  span {
+    color: $lightpurple;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13.5px;
+    margin: auto;
+  }
+
+  div {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 13.5px;
+    margin-bottom:0px;
+    vertical-align: center;
+    a {
+        position: inherit;
+        display: inline-block;
+        vertical-align: middle;
+    
+        i {
+            font-size: 1.3em;
+          }
+      }
+  }
+
+  }

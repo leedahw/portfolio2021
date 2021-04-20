@@ -8,11 +8,17 @@
   src: url("../fonts/Sunflora.otf");
   font-weight: bold;
 }
+@font-face {
+  /*title*/
+  font-family: sf-ui;
+  src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+}
 /*body*/
 /*GENERAL DOCWEB STYLES*/
 html, body {
+  display: block;
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 140%;
   color: #323232;
   margin: 0;
@@ -62,6 +68,10 @@ main {
   line-height: 105%;
 }
 
+.sfui {
+  font-family: sf-ui;
+}
+
 .purple {
   color: #6C4CB3;
 }
@@ -86,10 +96,18 @@ main {
   border: 2px solid blue;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 760px) {
   .desktopHide {
     display: none;
   }
+}
+
+span.bold {
+  font-weight: 600;
 }
 
 /*coming soon page*/
@@ -153,6 +171,7 @@ main {
   border-image-width: 1;
   border-image-outset: 0;
   border-image-repeat: stretch;
+  z-index: 200;
 }
 @media screen and (min-width: 760px) {
   .borderFrame {
@@ -168,6 +187,7 @@ nav.navbar {
   top: 0;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1;
 }
 nav.navbar .navCheckbox {
   display: none;
@@ -291,7 +311,39 @@ nav.navbar ul .active, nav.navbar ul a:hover {
   margin-bottom: 8rem;
 }
 
+/*ABOUT PAGE*/
+.aboutDiv {
+  display: inline-block;
+  height: 100%;
+  margin-bottom: 8rem;
+}
+.aboutDiv div {
+  margin-bottom: 3rem;
+}
+.aboutDiv div h2 {
+  font-family: sf-ui;
+  font-size: 1.5rem;
+  line-height: 80%;
+  margin-bottom: 0;
+}
+.aboutDiv div p, .aboutDiv div a {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 980px) {
+  .aboutDiv div p, .aboutDiv div a {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1415px) {
+  .aboutDiv {
+    height: 50vh;
+  }
+}
+
 /*projectthumbnail*/
+.workContainer {
+  margin-bottom: 8rem;
+}
 @media only screen and (min-width: 760px) {
   .workContainer {
     display: flex;
@@ -318,6 +370,13 @@ nav.navbar ul .active, nav.navbar ul a:hover {
   top: 0.5rem;
   left: 0.5rem;
 }
+.projectDiv div h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.projectDiv div p {
+  margin-top: 0;
+}
 @media only screen and (min-width: 760px) {
   .projectDiv {
     width: 50%;
@@ -328,6 +387,7 @@ nav.navbar ul .active, nav.navbar ul a:hover {
 main.contacts {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8rem;
 }
 main.contacts .leftColumn {
   margin-top: 15rem;
@@ -340,7 +400,7 @@ main.contacts .leftColumn .formContainer form {
   display: flex;
   flex-direction: column;
 }
-main.contacts .leftColumn .formContainer form input {
+main.contacts .leftColumn .formContainer form input, main.contacts .leftColumn .formContainer form textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #323232;
@@ -350,7 +410,7 @@ main.contacts .leftColumn .formContainer form input {
   padding-left: 0.5rem;
   margin-bottom: 1rem;
 }
-main.contacts .leftColumn .formContainer form input:focus {
+main.contacts .leftColumn .formContainer form input:focus, main.contacts .leftColumn .formContainer form textarea:focus {
   border: 1px solid #00000029;
   outline: none;
 }
@@ -386,6 +446,11 @@ main.contacts .leftColumn .formContainer form button {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+  }
+}
+@media only screen and (min-width: 1415px) {
+  main.contacts {
+    height: 100vh;
   }
 }
 
@@ -424,6 +489,46 @@ main.contacts .leftColumn .formContainer form button {
     width: 30%;
     margin-bottom: 0;
   }
+}
+
+/*FOOTER*/
+footer {
+  background-color: #f8f8f8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2rem;
+  vertical-align: middle;
+}
+footer span {
+  color: #a5add2;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13.5px;
+  margin: auto;
+}
+footer div {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 13.5px;
+  margin-bottom: 0px;
+  vertical-align: center;
+}
+footer div a {
+  position: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer div a i {
+  font-size: 1.3em;
 }
 
 /*# sourceMappingURL=main.css.map */

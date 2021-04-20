@@ -1,7 +1,7 @@
 /*COLOR VARIABLES*/
 /*MODULARSCALE VARIABLE*/
 /*FONTS*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*COLOR VARIABLES*/
 /*MODULAR SCALE VARIABLE need plgin*/
 /*FONTS*/
@@ -12,14 +12,22 @@
   src: url("../fonts/Sunflora.otf");
   font-weight: bold;
 }
+@font-face {
+  /*title*/
+  font-family: sf-ui;
+  src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+}
 /*body*/
 /*GENERAL DOCWEB STYLES*/
 html, body {
+  display: block;
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 140%;
   color: #323232;
-  margin: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -37,22 +45,35 @@ a {
 
 i {
   width: 24px;
-  color: #2a1150;
+  color: #6C4CB3;
 }
 
 main {
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 5rem;
 }
-
-nav li {
-  list-style-type: none;
+@media only screen and (min-width: 760px) {
+  main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  main {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 
 /*class-based styling*/
 .sunflora {
   font-family: sunflora;
-  line-height: 140%;
+  line-height: 105%;
+}
+
+.sfui {
+  font-family: sf-ui;
 }
 
 .purple {
@@ -77,6 +98,20 @@ nav li {
 
 .outline {
   border: 2px solid blue;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 760px) {
+  .desktopHide {
+    display: none;
+  }
+}
+
+span.bold {
+  font-weight: 600;
 }
 
 /*coming soon page*/
@@ -117,14 +152,14 @@ nav li {
 
 #sns-icons {
   margin-top: 1rem;
-  color: #2a1150;
+  color: #6C4CB3;
   width: 50px;
 }
 
 /*BORDERFRAME CSS*/
-#border-frame {
-  position: absolute;
-  display: block;
+.borderFrame {
+  position: fixed;
+  display: none;
   left: 0;
   top: 0;
   margin-top: 0px !important;
@@ -140,12 +175,364 @@ nav li {
   border-image-width: 1;
   border-image-outset: 0;
   border-image-repeat: stretch;
+  z-index: 200;
+}
+@media screen and (min-width: 760px) {
+  .borderFrame {
+    display: block;
+  }
+}
+
+/*NAVBAR MOBILE-FIRST*/
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  padding-top: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+nav.navbar .navCheckbox {
+  display: none;
+}
+nav.navbar .navToggle {
+  position: absolute;
+  cursor: pointer;
+  padding-top: 1rem;
+  margin: 0 1rem;
+  right: 0;
+  height: 100%;
+}
+nav.navbar .navToggle i {
+  font-size: 1.5rem;
+  color: #00000029;
+}
+nav.navbar .navToggle #close {
+  display: block;
+  opacity: 0;
+  transition: all 350ms;
+  transition-timing-function: ease-out;
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar .navToggle {
+    padding-right: 3rem;
+  }
+}
+nav.navbar ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+nav.navbar ul li {
+  display: none;
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  align-content: center;
+}
+nav.navbar ul li:first-child {
+  margin-right: auto;
+  display: block;
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar ul li:first-child {
+    padding-left: 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  nav.navbar ul li:first-child {
+    padding-left: 6rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  nav.navbar ul li:last-child {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  nav.navbar ul li:last-child {
+    padding-right: 6rem;
+  }
+}
+nav.navbar ul a {
+  color: #707070;
+  transition: all 300ms;
+  transition-timing-function: ease-out;
+}
+nav.navbar ul a:active {
+  scale: 95%;
+}
+nav.navbar ul a img {
+  height: 1.5rem;
+}
+nav.navbar ul .active, nav.navbar ul a:hover {
+  color: #6C4CB3;
+}
+@media only screen and (min-width: 1000px) {
+  nav.navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav.navbar .navToggle {
+    display: none;
+  }
+  nav.navbar ul {
+    padding: 0;
+    flex-direction: row;
+  }
+  nav.navbar ul li {
+    display: block;
+  }
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar {
+    padding-top: 1rem;
+  }
+}
+
+#navCheckbox:checked ~ ul.navbar-links li {
+  display: block;
+}
+
+#navCheckbox:checked ~ label.navToggle #close {
+  display: block;
+  opacity: 100;
+}
+
+#navCheckbox:checked ~ label.navToggle #menu {
+  display: none;
+}
+
+/*MAIN HEADER*/
+.introduction {
+  margin-top: 15rem;
+  margin-bottom: 8rem;
+}
+
+/*ABOUT PAGE*/
+.aboutDiv {
+  display: inline-block;
+  height: 100%;
+  margin-bottom: 8rem;
+}
+.aboutDiv div {
+  margin-bottom: 3rem;
+}
+.aboutDiv div h2 {
+  font-family: sf-ui;
+  font-size: 1.5rem;
+  line-height: 80%;
+  margin-bottom: 0;
+}
+.aboutDiv div p, .aboutDiv div a {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 980px) {
+  .aboutDiv div p, .aboutDiv div a {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1415px) {
+  .aboutDiv {
+    height: 50vh;
+  }
 }
 
 /*projectthumbnail*/
+.workContainer {
+  margin-bottom: 8rem;
+}
+@media only screen and (min-width: 760px) {
+  .workContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.workContainer .worksTitle {
+  flex: 0 0 100%;
+  margin-bottom: 0;
+}
+
+.projectDiv {
+  position: relative;
+  margin-bottom: 2rem;
+}
 .projectDiv img {
+  z-index: -1;
   width: 100%;
   height: auto;
+}
+.projectDiv div {
+  width: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.projectDiv div h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.projectDiv div p {
+  margin-top: 0;
+}
+@media only screen and (min-width: 760px) {
+  .projectDiv {
+    width: 50%;
+  }
+}
+
+/*CONTACT FORM*/
+main.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+main.contacts .leftColumn {
+  margin-top: 15rem;
+}
+main.contacts .leftColumn .formContainer {
+  margin-top: 8rem;
+}
+main.contacts .leftColumn .formContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main.contacts .leftColumn .formContainer form input, main.contacts .leftColumn .formContainer form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #323232;
+  border: 1px solid #00000029;
+  border-radius: 0;
+  height: 2rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+main.contacts .leftColumn .formContainer form input:focus, main.contacts .leftColumn .formContainer form textarea:focus {
+  border: 1px solid #00000029;
+  outline: none;
+}
+main.contacts .leftColumn .formContainer form #message {
+  height: 5rem;
+}
+main.contacts .leftColumn .formContainer form input[name=message]::placeholder {
+  position: absolute;
+  top: 0.5rem;
+}
+main.contacts .leftColumn .formContainer form button {
+  background-color: #6C4CB3;
+  color: #fff;
+  border: none;
+  height: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  main.contacts .leftColumn .formContainer form button {
+    width: 10%;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main.contacts .leftColumn {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1415px) {
+  main.contacts {
+    height: 100vh;
+  }
+}
+
+#responseDiv p#success {
+  font-size: 14px;
+  color: #6C4CB3;
+}
+#responseDiv p#danger {
+  font-size: 14px;
+  color: #c94966;
+}
+
+/*CONTACT FORM MESAGES*/
+.messagesContainer {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+.messagesContainer h3 {
+  margin-bottom: 2rem;
+}
+.messagesContainer div {
+  font-size: 16px;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #00000029;
+}
+.messagesContainer div p {
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
+.messagesContainer div span {
+  padding-bottom: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  .messagesContainer {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+
+/*FOOTER*/
+footer {
+  background-color: #f8f8f8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2rem;
+  vertical-align: middle;
+}
+footer span {
+  color: #a5add2;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13.5px;
+  margin: auto;
+}
+footer div {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 13.5px;
+  margin-bottom: 0px;
+  vertical-align: center;
+}
+footer div a {
+  position: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer div a i {
+  font-size: 1.3em;
 }
 
 @font-face {
@@ -195,6 +582,11 @@ html, body {
   background-color: #fff;
 }
 
+main {
+  margin-top: 15rem;
+  margin-bottom: 8rem;
+}
+
 @media (min-width: 980px) {
   body {
     margin: auto;
@@ -203,7 +595,7 @@ html, body {
 
   main {
     width: 55%;
-    margin: 1.777rem auto;
+    margin: 15rem auto 8rem auto;
   }
 }
 .max-flex {
@@ -213,13 +605,13 @@ html, body {
 
 @media (min-width: 1090px) {
   body {
-    margin: auto;
+    margin: 0 auto;
     vertical-align: middle;
   }
 
   main {
     width: 75%;
-    margin: 1.77rem auto;
+    margin: 1.77rem auto 8rem auto;
   }
 
   .outer-max-flex {
@@ -229,6 +621,10 @@ html, body {
 }
 /*TABLET BASED TWO COLUMN WIDTH*/
 @media (min-width: 980px) {
+  main {
+    margin-bottom: 8rem;
+  }
+
   .max-flex {
     flex-direction: row;
     justify-content: space-between;
@@ -272,6 +668,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
+    margin-top: 15rem;
   }
 
   .desktop-right-column {
@@ -281,6 +678,7 @@ html, body {
     align-items: flex-end;
     padding-left: 2rem;
     padding-bottom: 1rem;
+    margin-top: 15rem;
   }
 
   .max-flex {
@@ -359,7 +757,7 @@ div {
 .section-title {
   font-family: sf-ui;
   font-weight: 600;
-  color: #2a1150;
+  color: #6C4CB3;
 }
 
 h2.section-title {
@@ -374,50 +772,6 @@ h3.section-title {
 /*ABOUT SECTION*/
 .about-text {
   line-height: 160%;
-}
-
-/*FOOTER*/
-footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.75em;
-  vertical-align: middle;
-}
-
-footer > span {
-  font-family: sf-ui;
-  color: #2a1150;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 13.5px;
-  margin: auto;
-}
-
-footer > div {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  margin: 13.5px;
-  margin-bottom: 0px;
-  vertical-align: center;
-}
-
-footer > div > a {
-  position: inherit;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-footer > div > a > i {
-  font-size: 1.3em;
 }
 
 .content-wrapper {
@@ -478,7 +832,7 @@ p.list {
 
 #name {
   font-family: sunflora;
-  color: #2a1150;
+  color: #6C4CB3;
   line-height: 100%;
   margin-left: 1.3rem;
   margin-top: 1.3rem;
@@ -495,8 +849,12 @@ p.list {
   background-color: #fbf2d4;
 }
 
+.bg-lightgrey {
+  background-color: #fafafa;
+}
+
 .purple {
-  color: #2a1150;
+  color: #6C4CB3;
 }
 
 /*BORDERS*/
@@ -508,6 +866,132 @@ p.list {
 .border-left {
   left: 0px;
   width: 8px;
+}
+
+/*NAVBAR MOBILE-FIRST*/
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  padding-top: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(155, 157, 168, 0.05);
+}
+nav.navbar .navCheckbox {
+  display: none;
+}
+nav.navbar .navToggle {
+  position: absolute;
+  cursor: pointer;
+  padding-top: 1rem;
+  margin: 0 1rem;
+  right: 0;
+  height: 100%;
+}
+nav.navbar .navToggle i {
+  font-size: 1.5rem;
+  color: #9b9da8;
+}
+nav.navbar .navToggle #close {
+  display: block;
+  opacity: 0;
+  transition: all 350ms;
+  transition-timing-function: ease-out;
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar .navToggle {
+    padding-right: 3rem;
+  }
+}
+nav.navbar ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+nav.navbar ul li {
+  display: none;
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  align-content: center;
+}
+nav.navbar ul li:first-child {
+  margin-right: auto;
+  display: block;
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar ul li:first-child {
+    padding-left: 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  nav.navbar ul li:first-child {
+    padding-left: 6rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  nav.navbar ul li:last-child {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  nav.navbar ul li:last-child {
+    padding-right: 6rem;
+  }
+}
+nav.navbar ul a {
+  justify-content: center;
+  color: #707070;
+  transition: all 300ms;
+  transition-timing-function: ease-out;
+}
+nav.navbar ul a:active {
+  scale: 95%;
+}
+nav.navbar ul a img {
+  height: 1.5rem;
+}
+nav.navbar ul .active, nav.navbar ul a:hover {
+  color: #6C4CB3;
+}
+@media only screen and (min-width: 1000px) {
+  nav.navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav.navbar .navToggle {
+    display: none;
+  }
+  nav.navbar ul {
+    padding: 0;
+    flex-direction: row;
+  }
+  nav.navbar ul li {
+    display: block;
+  }
+}
+@media only screen and (min-width: 760px) {
+  nav.navbar {
+    padding-top: 1rem;
+  }
+}
+
+#navCheckbox:checked ~ ul.navbar-links li {
+  display: block;
+}
+
+#navCheckbox:checked ~ label.navToggle #close {
+  display: block;
+  opacity: 100;
+}
+
+#navCheckbox:checked ~ label.navToggle #menu {
+  display: none;
 }
 
 /*background MEDIA QUERIES*/

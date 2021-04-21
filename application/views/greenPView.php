@@ -117,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div>
                     <h2>Learned Outcomes</h2>
                     <div class="paragraph">
-                        <p>Through this project learned to analyze user flows at a much deeper level. This process also sparked an interest in researching how wearable technologies are addressing accessibility.</p>
+                        <p>Through this project I learned to analyze user flows at a much deeper level. This process also sparked an interest in researching how wearable technologies are addressing accessibility.</p>
 
                         <p>This project has definitely opened my eyes to the usefulness of smart watch applications!</p>
 
@@ -128,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="projectNav">
-            <a href="#" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
+            <a href="<?php echo base_url();?>" class=""><i class="fas fa-arrow-left"></i>Back to Home</a>
             <a href="<?php echo base_url('suum');?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>

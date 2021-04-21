@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
             <li>
                 <h4>Tech:</h4>
-                <span>Adobe XD , Illustrator , MongoDB , Express , React , Node.js</span>
+                <span>Adobe XD , MongoDB , Express , Reactjs , Node.js</span>
             </li>
             <li>
                 <h4>Team Members:</h4>
@@ -72,19 +72,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         
                 </div>
 
-
-                    <img src="http://localhost/portfolio2021/images/projects/suum/suumUserflow.png" alt="user flow for suum app"/>
-                    
-                    <p style="text-align:left"><span class="bold">suum</span> is a productivity app that encourages users maintain positive habits in the lives by gamifying goal and habit creation. It allows users identify specific habits they want to develop thn follow prompts & reminders to motivate motivate actions towards their goal. And by maintaining positive habits, users will seea growth in the mental health and well-being. Every time a user completes a habit, the app will respond by watering a plant on the homescreen that represents the user's progress.</p>
-
-
                 <div>
                     <h2>Initial Concept</h2>
                     <div class="paragraph">
+                        <p><span class="bold">suum</span> is a productivity app that encourages users maintain positive habits in the lives by gamifying goal and habit creation. It allows users identify specific habits they want to develop thn follow prompts & reminders to motivate motivate actions towards their goal. And by maintaining positive habits, users will seea growth in the mental health and well-being. Every time a user completes a habit, the app will respond by watering a plant on the homescreen that represents the user's progress.</p>
+
                         <p>Based on our four pillars, we wanted suum to give off a kind and encouraging tone to users. So researching into colour psychology, we decided our main colour to be green, symbolizing support, balance and harmony, and accent colour as yellow to add vibrancy and encourage motivation.</p>
 
                     </div>
                 </div>
+
+                    <img src="http://localhost/portfolio2021/images/projects/suum/suumUserflow.png" alt="user flow for suum app"/>
+                    
+                    <p>This user flow maps out suum's tight user flow. The path starts in the evening where users input the habits they want to complete for the next day. Then, throughout the following day, they receive notifications from the app with gentle reminders.</p>
+
+
                 
                 <img src="http://localhost/portfolio2021/images/projects/suum/suumStyleTile.png" alt="suum's styletile"/>
                 <p>This style tile above shows implementation of suum's brand colours and logo.</p>
@@ -126,9 +128,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div>
                     <h2>Learned Outcomes</h2>
                     <div class="paragraph">
-                        <p>Developing in react, I learned about building reusable components and the concept of React state and the setState functions. I also learned about passing state from screens to components and vice versa.</p>
+                        <p>Developing with Reactjs, I learned about building reusable components and the concept of React state and the setState functions. I also learned about passing state from screens to components and vice versa.</p>
 
-                        <p>Thought there were many stumbles, I think this app was an overall vicotry for me and our group. From starting at square one, we were able to build a functioning, deployed React App. I am so proud of the leaps in development we made.</p>
+                        <p>Thought there were many stumbles, I think this app was an overall vicotry for me and our group. From starting at square one, we were able to build a functioning, deployed React App. I am incredibly proud of the leaps in development we made.</p>
 
                     </div>
                 </div>
@@ -147,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="projectNav">
             <a href="<?php echo base_url('greenP')?>" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
-            <a href="#" class="">Next Project<i class="fas fa-arrow-right"></i></a>
+            <a href="<?php echo base_url('archiWeekly')?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>

@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="paragraph">
                         <p>Some struggles I faced during the design process was designing with the concept of glanceability.</p>
 
-                        <p>This frame of thought had me analyze what information was critical and the most necessary to deliver to the user.. and had me repeatedly ask myself, <br/> <span class="bold">"can it be distilled further?"</span></p>
+                        <p>This frame of thought had me analyze what information was critical and the most necessary to deliver to the user.. and had me repeatedly ask myself: <span class="bold">"can it be distilled further?"</span></p>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="projectNav">
             <a href="#" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
-            <a href="#" class="">Next Project<i class="fas fa-arrow-right"></i></a>
+            <a href="<?php echo base_url('suum');?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>

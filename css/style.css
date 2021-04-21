@@ -552,6 +552,9 @@ footer div a i {
   padding-left: 0;
   padding-right: 0;
 }
+.projectFull .projectDetails {
+  margin-bottom: 3rem;
+}
 .projectFull .projectBanner {
   position: relative;
   margin: 5rem 0 0 0;
@@ -623,6 +626,23 @@ footer div a i {
   .projectSpecs {
     align-items: center;
   }
+}
+
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+.projectNav a {
+  display: flex;
+  align-items: center;
+  color: #707070;
+}
+.projectNav i {
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: #6C4CB3;
 }
 
 @font-face {

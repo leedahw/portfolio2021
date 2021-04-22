@@ -225,7 +225,15 @@ nav.navbar .navToggle #close {
   display: block;
   opacity: 0;
   transition: all 350ms;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+}
+nav.navbar .navToggle #close:hover {
+  color: #6C4CB3;
+}
+nav.navbar .navToggle #menu:hover {
+  color: #6C4CB3;
+  transition: all 350ms;
+  transition-timing-function: ease-in-out;
 }
 @media only screen and (min-width: 760px) {
   nav.navbar .navToggle {

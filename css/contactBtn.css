@@ -225,7 +225,15 @@ nav.navbar .navToggle #close {
   display: block;
   opacity: 0;
   transition: all 350ms;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+}
+nav.navbar .navToggle #close:hover {
+  color: #6C4CB3;
+}
+nav.navbar .navToggle #menu:hover {
+  color: #6C4CB3;
+  transition: all 350ms;
+  transition-timing-function: ease-in-out;
 }
 @media only screen and (min-width: 760px) {
   nav.navbar .navToggle {
@@ -714,7 +722,6 @@ footer div a i {
   width: 50%;
 }
 
-/*COLOR VARIABLES*/
 #contactBtn {
   --primary: #6C4CB3;
   --primary-dark: #34225b;
@@ -768,7 +775,7 @@ footer div a i {
   cursor: pointer;
   position: relative;
   border: 0;
-  padding: 8px 0;
+  padding: 0;
   min-width: 100px;
   text-align: center;
   margin: 0 0 0 auto;
@@ -896,6 +903,12 @@ footer div a i {
   stroke-dasharray: 14px;
   stroke: var(--success);
   stroke-dashoffset: calc(var(--success-stroke) * 1px);
+}
+#contactBtn:hover {
+  filter: alpha(opacity=90);
+  opacity: 0.85;
+  transition: all 350ms;
+  transition-timing-function: ease-in-out;
 }
 
 #contactBtn {

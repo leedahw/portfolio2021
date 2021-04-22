@@ -241,16 +241,27 @@ nav.navbar {
         right: 0;
         height: 100%;
 
+        
         i {
             font-size:1.5rem;
             color:$lightgrey;
         }
-
+        
         #close {
             display: block;
             opacity:0;
             transition: all 350ms;
-            transition-timing-function: ease-out;
+            transition-timing-function: ease-in-out;
+
+            &:hover {
+                color: $mainpurple;
+            }
+        }
+
+        #menu:hover{
+            color: $mainpurple;
+            transition: all 350ms;
+            transition-timing-function: ease-in-out;
         }
 
         @media only screen and(min-width:760px) {

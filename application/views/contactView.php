@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="formContainer">
-                <form id="#contact-form" method="post" action="<?php base_url('/contact/submit')?>">
+                <form id="#contact-form" method="post" action="<?php base_url('index.php/contact/submit')?>">
                     <input type="text" name="name" id="name" placeholder="Name" />
                     <input type="email" name="emailAddress" id="emailAddress" placeholder="Email address" />
                     <textarea type="text" name="message" id="message" placeholder="Drop me a line!"></textarea>
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             let message = $('#message').val();
             if(name!="" && emailAddress!="" && message!=""){
                 $.ajax({
-                    url:'<?php echo base_url('/contact/submit')?>',
+                    url:'<?php echo base_url('index.php/contact/submit')?>',
                     type:"post",
                     data:{
                         type:1,

@@ -5,13 +5,13 @@
 @font-face {
   /*title*/
   font-family: sunflora;
-  src: url("../fonts/Sunflora.otf");
+  src: url("https://www.alanalee.me/system/fonts/Sunflora.otf");
   font-weight: bold;
 }
 @font-face {
   /*title*/
   font-family: sf-ui;
-  src: url("https://www.alanalee.me/fonts/SF-UI-Display-Bold.otf");
+  src: url("https://www.alanalee.me/system/fonts/SF-UI-Display-Bold.otf");
 }
 /*body*/
 /*GENERAL DOCWEB STYLES*/

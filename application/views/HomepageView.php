@@ -18,11 +18,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <i class="fas fa-times" id="close"></i>
             </label>
               <ul class="navbar-links">
-              <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
+              <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="<?php echo base_url();?>images/logo.svg"/></a></li>
                 <li><a href="<?php echo base_url();?>" class="navActive">Home</a></li>
-                <li><a href='<?php echo base_url();?>about'>About</a></li>
-                <li><a href='<?php echo base_url();?>resume'>Resume</a></li>
-                <li><a href='<?php echo base_url();?>contact'>Contact</a></li>
+                <li><a href='<?php echo base_url();?>index.php/about'>About</a></li>
+                <li><a href='<?php echo base_url();?>index.php/resume'>Resume</a></li>
+                <li><a href='<?php echo base_url();?>index.php/contact'>Contact</a></li>
               </ul>
     </nav>
 
@@ -41,8 +41,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 //fetchWorks here & repeat for each in db
                 foreach($wrk as $key=>$project){?>
                     <div  class='projectDiv'>
-                      <a href="<?php echo $project['url']?>"class="">
-                        <img class="projectThumbnail" src="http://localhost/portfolio2021/images/projects/thumbnails/<?php echo $project['thumbnail']?>" alt="project thumbnail"/>
+                      <a href="<?php echo base_url('index.php/'. $project['url'])?>"class="">
+                        <img class="projectThumbnail" src="<?php echo base_url();?>images/projects/thumbnails/<?php echo $project['thumbnail']?>" alt="project thumbnail"/>
                         <div>
                             <h3 class="projectTitle"><?php echo $project['name']?></h3>
                             <p class="roles"><?php echo $project['roles']?></p>

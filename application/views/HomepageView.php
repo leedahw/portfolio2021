@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </label>
               <ul class="navbar-links">
               <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="../images/logo.svg"/></a></li>
-                <li><a href="<?php echo base_url();?>" class="active">Home</a></li>
+                <li><a href="<?php echo base_url();?>" class="navActive">Home</a></li>
                 <li><a href='<?php echo base_url();?>about'>About</a></li>
                 <li><a href='<?php echo base_url();?>resume'>Resume</a></li>
                 <li><a href='<?php echo base_url();?>contact'>Contact</a></li>
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php 
                 //fetchWorks here & repeat for each in db
                 foreach($wrk as $key=>$project){?>
-                    <div  class='projectDiv outline'>
+                    <div  class='projectDiv'>
                       <a href="<?php echo $project['url']?>"class="">
                         <img class="projectThumbnail" src="http://localhost/portfolio2021/images/projects/thumbnails/<?php echo $project['thumbnail']?>" alt="project thumbnail"/>
                         <div>

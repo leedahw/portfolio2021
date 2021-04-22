@@ -33,7 +33,7 @@ $font-stack: 'Montserrat', sans-serif;
 html, body {
     display: block;
     font-family: $font-stack;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 140%;
     color:$black;
     margin: 0;
@@ -271,7 +271,7 @@ nav.navbar {
             display: none;
             list-style-type: none;
             margin: 1rem;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 600;
             align-content: center;
 
@@ -314,7 +314,7 @@ nav.navbar {
             }
         }
         
-        .active , a:hover {
+        .navActive , a:hover {
             color: $mainpurple;
         }
         
@@ -406,6 +406,7 @@ nav.navbar {
         justify-content: space-between;
     }
 }
+
 .projectDiv { 
     position: relative;
     margin-bottom: 1rem;
@@ -414,6 +415,17 @@ nav.navbar {
         z-index: -1;
         width: 100%;
         height: auto;
+        transition: all 450ms;
+
+        
+        &:hover {
+        zoom: 1.1;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+        box-shadow: 0 3px 1rem rgba($lightgrey, 0.2);
+
+
+    }
     }   
 
     div {
@@ -421,21 +433,24 @@ nav.navbar {
         position: absolute;
         top:0.5rem;
         left:0.5rem;
+        transition: all 450ms;
 
         h3 {
-            margin-top: 1rem;
-            margin-bottom: 0;
+            
+            margin: 1rem 0 0 1rem;
         }
 
-        p{
-            margin-top:0;
+        p{  
+            font-size:14px;
+            margin: 0 0 0 1rem;
         }
-
-    }
-    @media only screen and (min-width: 780px) {
-        width:49%;
         
     }
+    @media only screen and (min-width: 780px) {
+        width: 49%;
+        
+    }
+
 }
 
 /*CONTACT FORM*/
@@ -480,7 +495,6 @@ main.contacts{
             }
 
             button {
-                background-color: $mainpurple;
                 color: $white;
                 border: none;
                 height: 2rem;
@@ -516,11 +530,13 @@ main.contacts{
 
 #responseDiv {
     p#success {
+        margin-top:0;
         font-size:14px;
         color: $mainpurple;
     }
 
-    p#danger {
+    p#error {
+        margin-top:0;
         font-size:14px;
         color: #c94966;
     }

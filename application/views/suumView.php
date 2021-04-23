@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <?php $this->load->view('headerView');?>
-    <link rel="stylesheet" href="../css/main.css" /> <!-- change to absolute on deploy-->
+    <link rel="stylesheet" href="<?php echo base_url('css/main.css');?>" /> <!-- change to absolute on deploy-->
 </head>
 <body>
     <!-- BORDERS & nav Do not touch-->
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <main class="projectFull">
         <!-- banner here should be made to fit -->
         <div style="justify-content:flex-end; background-color:#fafafa" class="projectBanner mockup">
-            <img src="http://localhost/portfolio2021/images/projects/suum/suum1.png" alt="suum project banner showin screen mockup"/>
+            <img src="<?php echo base_url('images/projects/suum/suum1.png');?>" alt="suum project banner showin screen mockup"/>
 
             <h1>suum</h1>
         </div>
@@ -62,10 +62,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h2>Solution</h2>
                         <div class="paragraph">
                             <p>Our solution approach calls for <span class="bold">four main pillars of mental health:</span></p>
-                            <span><span class="bold">1.</span> Motivation and Encouragement</span> 
-                            <span><span class="bold">2.</span> Personal Goals and Habits</span> 
-                            <span><span class="bold">3.</span> Self-Achievement and Personal Victories</span> 
-                            <span><span class="bold">4.</span> Support and Wellness</span> 
+                            <span><span class="bold">1.</span> Motivation and Encouragement</span> <br/>
+                            <span><span class="bold">2.</span> Personal Goals and Habits</span> <br/>
+                            <span><span class="bold">3.</span> Self-Achievement and Personal Victories</span> <br/>
+                            <span><span class="bold">4.</span> Support and Wellness</span> <br/>
                             
                             <p>With the solution approach in mind, the team started to map and plan out how our application will match the solution approach, which we call <span class="bold">suum!</span></p>
                         </div>
@@ -82,13 +82,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
 
-                    <img src="http://localhost/portfolio2021/images/projects/suum/suumUserflow.png" alt="user flow for suum app"/>
+                    <img src="<?php echo base_url('images/projects/suum/suumUserflow.png');?>" alt="user flow for suum app"/>
                     
                     <p>This user flow maps out suum's tight user flow. The path starts in the evening where users input the habits they want to complete for the next day. Then, throughout the following day, they receive notifications from the app with gentle reminders.</p>
 
 
                 
-                <img src="http://localhost/portfolio2021/images/projects/suum/suumStyleTile.png" alt="suum's styletile"/>
+                <img src="<?php echo base_url('images/projects/suum/suumStyleTile.png');?>" alt="suum's styletile"/>
                 <p>This style tile above shows implementation of suum's brand colours and logo.</p>
 
                 <div>
@@ -103,13 +103,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 
                 <div id="gifContainer">
-                    <img src="http://localhost/portfolio2021/images/projects/suum/suumScreen1.png" alt="final hoome screen designs."/>
-                    
-                    <img src="http://localhost/portfolio2021/images/projects/suum/suumScreen2.png" alt="final hoome screen designs."/>
-                </div>
-                <div id="gifContainer">
-                    <p style="margin-bottom:2rem; padding-right:0.5rem; text-align:left">The left set of screens represent a set of features offered in the "Greenspace," our home screen for the app. suum offers users a tab style component to tab through their daily habits and mindfulness tips.</p>
-                    <p style="margin-bottom: 4rem; padding-left:0.5rem; text-align:left">The right set of screens showcase the nightly check in function of suum. This is the cycle where users would have their last chance to check their habits off for the day. If these habits were not finished, they can be pushed to te next day. After the check in, users can then plan their habits for the following day.</p>
+                    <div>
+                        <img src="<?php echo base_url('images/projects/suum/suumScreen1.png');?>" alt="final home screen designs."/>
+                        <p style="margin-bottom:2rem; padding-right:0.5rem; text-align:left">The set of screens above represent a set of features offered in the "Greenspace," our home screen for the app. suum offers users a tab style component for user to flip through their daily habits and mindfulness tips.</p>
+                    </div>
+                    <div>
+                        <img src="<?php echo base_url('images/projects/suum/suumScreen2.png');?>" alt="NIhtly Check-in Screen Designs."/>
+                        <p style="margin-bottom: 4rem; padding-left:0.5rem; text-align:left">This set of screens showcase the nightly check in function of suum. This is the cycle where users would have their last chance to check their habits off for the day. If these habits were not finished, they can be pushed to te next day. After the check in, users can then plan their habits for the following day.</p>
+                    </div>
                 </div>
 
             </div>
@@ -139,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h2>External Links</h2>
                     <div class="paragraph">
                         <p>Check out our deployed app <a class="purple bold" id="appLink" href="https://suum.herokuapp.com/">here!</a></p>
-                        <p>You can read more in depth about the idea of suum in our <a class="purple bold" href="">white paper document.</a></p>
+                        <p>You can read more in depth about the idea of suum in our <a class="purple bold" href="<?php echo base_url('suum.pdf')?>" target="_blank">white paper document.</a></p>
 
                     </div>
                 </div>
@@ -148,8 +149,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="projectNav">
-            <a href="<?php echo base_url('greenP')?>" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
-            <a href="<?php echo base_url('archiWeekly')?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
+            <a href="<?php echo base_url('index.php/GreenP')?>" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
+            <a href="<?php echo base_url('index.php/ArchiWeekly')?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>

@@ -17,7 +17,7 @@
     <meta property="og:description" content="UX|UI Designer with a passion for accessibility on the web."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.alanalee.me/"/>
-    <meta property="og:image" content="http://www.alanalee.me/images/alanadlee-coming-soon.png"/> 
+    <meta property="og:image" content="http://www.alanalee.me/images/alanadlee.png"/> 
     <meta property="og:image:alt" content="a preview of the coming soon page."/> 
     
     <!-- Facebook recommended: 1200 x 630 - ideal: 1200 x 1200 square image --> 
@@ -31,7 +31,7 @@
     <meta property="og:url" content="https://alanalee.me/" />
     <meta property="og:title" content="Alana Dahwoon Lee | UX/UI Designer" />
     <meta property="og:description" content="UX|UI Designer with a passion for accessibility on the web." />
-    <meta property="og:image" content="http://www.alanalee.me/images/alanadlee-coming-soon.png" />
+    <meta property="og:image" content="http://www.alanalee.me/images/alanadlee.png" />
     
     <!--  Images for the Twitter Card should be at least 280px in width, and at least 150px in height. Image must be less than 1MB in size. Ideal is 1,024 x 512 -->
     <!-- paths need to be absolute -->

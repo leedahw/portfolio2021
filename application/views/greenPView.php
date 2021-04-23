@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <?php $this->load->view('headerView');?>
-    <link rel="stylesheet" href="../css/main.css" /> <!-- change to absolute on deploy-->
+    <link rel="stylesheet" href="<?php echo base_url('css/main.css');?>" /> <!-- change to absolute on deploy-->
 </head>
 <body>
     <!-- BORDERS & nav Do not touch-->
@@ -15,9 +15,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <main class="projectFull">
         <!-- banner here should be made to fit -->
         <div style="justify-content:space-between; background-color:#ecebec" class="projectBanner mockup">
-            <img src="http://localhost/portfolio2021/images/projects/greenP/greenP2.png" alt="greenP project banner showing watch face"/>
+            <img src="<?php echo base_url('images/projects/greenP/greenP2.png');?>" alt="greenP project banner showing watch face"/>
 
-            <img src="http://localhost/portfolio2021/images/projects/greenP/greenP.png" alt="greenP project banner showing watch face"/>
+            <img src="<?php echo base_url('images/projects/greenP/greenP.png');?>" alt="greenP project banner showing watch face"/>
             <h1>Green P Smart Watch App</h1>
         </div>
         <div class="projectSpecs"> 
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         
                     </div>
-                    <img src="http://localhost/portfolio2021/images/projects/greenP/greenPUserflow.png" alt="user flow of the proposed smart watch app"/>
+                    <img src="<?php echo base_url('images/projects/greenP/greenPUserflow.png');?>" alt="user flow of the proposed smart watch app"/>
                     <p>Working off the pain point, I created a user flow where the user could check their time left on the meter and extend their time directly in the smartwatch app.</p>
 
 
@@ -81,16 +81,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 
                 
-                <img src="http://localhost/portfolio2021/images/projects/greenP/greenPFinalScreens.png" alt="final screen designs."/>
+                <img src="<?php echo base_url('images/projects/greenP/greenPFinalScreens.png');?>" alt="final screen designs."/>
                 <p>The final screen designs shown here display the application of the design philosophy discussed above.</p>
                 
                 
                 <div id="gifContainer">
-                    <img src="http://localhost/portfolio2021/images/projects/greenP/greenPVoice.gif" alt="animated gif showing the voice command"/>
+                    <div><img src="<?php echo base_url('images/projects/greenP/greenPVoice.gif');?>" alt="animated gif showing the voice command"/>
+                        <p style="margin-bottom:2rem; padding-right:0.5rem">Voice command implementation.</p> 
+                    </div>
 
-                    <img src="http://localhost/portfolio2021/images/projects/greenP/greenPSuccess.gif" alt="animated gifs showing application of glanceability"/>
+                    <div><img src="<?php echo base_url('images/projects/greenP/greenPSuccess.gif');?>" alt="animated gifs showing application of glanceability"/>
+                        <p style="margin-bottom:2rem; padding-right:0.5rem">Designed with glanceability in mind.</p>
+                    </div>
                 </div>
-                <p>Left: Voice command implementation. Right: Designed with glanceability in mind.</p>
 
 
             </div>
@@ -129,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="projectNav">
             <a href="<?php echo base_url();?>" class=""><i class="fas fa-arrow-left"></i>Back to Home</a>
-            <a href="<?php echo base_url('suum');?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
+            <a href="<?php echo base_url('index.php/Suum');?>" class="">Next Project<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>

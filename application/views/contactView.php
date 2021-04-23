@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <?php $this->load->view('headerView')?>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="<?php base_url('css/main.css')?>" />
     <link rel="stylesheet" href="../css/contactBtn.css" /> <!-- change to absolute on deploy-->
 
 </head>

@@ -20,9 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <ul class="navbar-links">
               <li><a href="<?php echo base_url();?>" class="logo sunflora"><img src="<?php echo base_url();?>images/logo.svg"/></a></li>
                 <li><a href="<?php echo base_url();?>" class="navActive">Home</a></li>
-                <li><a href='<?php echo base_url();?>index.php/about'>About</a></li>
-                <li><a href='<?php echo base_url();?>index.php/resume'>Resume</a></li>
-                <li><a href='<?php echo base_url();?>index.php/contact'>Contact</a></li>
+                <li><a href='<?php echo base_url();?>index.php/About'>About</a></li>
+                <li><a href='<?php echo base_url();?>index.php/Resume'>Resume</a></li>
+                <li><a href='<?php echo base_url();?>index.php/Contact'>Contact</a></li>
               </ul>
     </nav>
 
@@ -60,12 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </main>
     <br/>
   <footer class="bg-yellow auto-margin">
-    <span>© Alana D. Lee - All Rights Reserved</span>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/alanadlee"><i aria-label="Go to LinkedIn Profile" class="fab fa-linkedin"></i></a>
-      <a href=" mailto: alana.d.lee@gmail.com"><i aria-label="Open email using mailto" class="far fa-envelope"></i></a>
-      <a href="https://twitter.com/alanadlee"><i class="fab fa-twitter-square"></i></a>
-    </div>
+    <?php $this->load->view('footerView');?>
   </footer>
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/navToggle.js"></script>

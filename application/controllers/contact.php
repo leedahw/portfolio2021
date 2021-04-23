@@ -1,18 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class contact extends CI_Controller {
+class Contact extends CI_Controller {
 	//load helpers and libraries
 	public function __construct(){
 		parent:: __construct();
 			$this->load->helper(array('form','url'));
-			$this->load->model('contactModel');
+			$this->load->model('ContactModel');
 	}
 		
 	//load contactView on index
 	public function index(){
 		//load the model php
-		$this->load->model('contactModel');
+		$this->load->model('ContactModel');
 		//call the fetchWorks function in model
 		$contacts['contact'] = $this->contactModel->fetchContact();
 		//load contctView with the fetched data

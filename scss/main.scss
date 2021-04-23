@@ -12,11 +12,11 @@ $white: #fff;
 $ratio: 1.333em;
 
 /*FONTS*/
-@font-face { /*title*/
-  font-family: sunflora;
-  src: url("../fonts/Sunflora.otf");
-  font-weight: bold;
-}
+@font-face { /*titleE*/
+    font-family: sunflora;
+    src: url("https://www.alanalee.me/fonts/Sunflora.otf");
+    font-weight: bold;
+  }
 
 @font-face { /*title*/
     font-family: sf-ui;
@@ -33,7 +33,7 @@ $font-stack: 'Montserrat', sans-serif;
 html, body {
     display: block;
     font-family: $font-stack;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 140%;
     color:$black;
     margin: 0;
@@ -497,7 +497,7 @@ main.contacts{
 
             #message {
                 height: 5rem;
-                
+                padding-top: 0.5rem;
             }
             
             input[name="message"]::placeholder {
@@ -531,11 +531,12 @@ main.contacts{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: baseline;
     }
 
     @media only screen and (min-width: 1415px) {
         height:100vh;
+        align-items: baseline;
     }
 }
 
@@ -731,7 +732,7 @@ main.contacts{
     }
 
     i {
-        font-size:2rem;
+        font-size:1.5rem;
         margin: .5rem;
         color: $mainpurple;
     }
@@ -793,9 +794,28 @@ main.contacts{
 
 #gifContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     margin-bottom: 1rem;
-    img {
-        width: 50%;
+    div {
+        flex-direction: column;
+        margin: 0;
+        padding:0;
+        height: auto;
+        justify-content: end;
+
+        @media only screen and (min-width:980px) {
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    
+    @media only screen and (min-width:980px) {
+        flex-direction: row;
     }
 }

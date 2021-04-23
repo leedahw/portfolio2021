@@ -5,17 +5,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <?php $this->load->view('headerView');?>
-    <link rel="stylesheet" href="../css/main.css" /> <!-- change to absolute on deploy-->
+    <link rel="stylesheet" href="<?php echo base_url('css/main.css');?>" /> <!-- change to absolute on deploy-->
 </head>
 <body>
-    <!-- BORDERS & nav Do not touch-->
-    <div class="borderFrame outline" id=""></div>
+    <!-- BORDERS & nav Do not touch -->
+    <div class="borderFrame outline" id="borderFrame"></div>
     <?php $this->load->view('navView');?>
 
     <main class="projectFull">
         <!-- banner here should be made to fit -->
         <div style="justify-content:flex-end; background-color:#f6f6f6" class="projectBanner mockup">
-            <img src="http://localhost/portfolio2021/images/projects/archiWeekly/bannerimage.png" alt="arachiweekly project banner showing screen laayouts in different devices."/>
+            <img src="<?php echo base_url('images/projects/archiWeekly/bannerimage.png');?>" alt="arachiweekly project banner showing screen laayouts in different devices."/>
 
             <h1>Archi Weekly</h1>
         </div>
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         
                     </div>
-                    <img src="http://localhost/portfolio2021/images/projects/archiWeekly/archiWeeklyScreen1.png" alt="final screen designs in mobile views"/>
+                    <img src="<?php echo base_url('images/projects/archiWeekly/archiWeeklyScreen1.png');?>" alt="final screen designs in mobile views"/>
                     <p></p>
 
 
@@ -75,11 +75,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 
                 
-                <img src="http://localhost/portfolio2021/images/projects/archiWeekly/archiWeeklySafarai.png" alt="final screen designs."/>
+                <img src="<?php echo base_url('images/projects/archiWeekly/archiWeeklySafarai.png');?>" alt="final screen designs."/>
                 <p>This screen shows the layout change to a wider, desktop size. The writing moves to the right half of the screen.</p>
                 
                 
-                <img src="http://localhost/portfolio2021/images/projects/archiWeekly/bannerimage.png" alt="final screen designs in mobile views"/>
+                <img src="<?php echo base_url('images/projects/archiWeekly/bannerimage.png');?>" alt="final screen designs in mobile views"/>
                     <p>This image compares the display states of Archi Weekly across a multitude of devices.</p>
 
 
@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="projectNav">
-            <a href="<?php echo base_url('suum');?>" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
+            <a href="<?php echo base_url('index.php/Suum');?>" class=""><i class="fas fa-arrow-left"></i>Previous Project</a>
             <a href="<?php echo base_url();?>" class="">Go to Home<i class="fas fa-arrow-right"></i></a>
         </div>
     </main>

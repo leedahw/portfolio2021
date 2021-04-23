@@ -1,5 +1,3 @@
-@use './main' as *;
-
 #contactBtn {
   --primary: #6C4CB3;
   --primary-dark: #34225b;
@@ -192,9 +190,5 @@
 #contactBtn {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  &:before,
-  &:after {
-      box-sizing: inherit;
-  }
 
 }

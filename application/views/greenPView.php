@@ -38,7 +38,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="projectDetails">
-            <div class="summary">
+            <div class="summary">            
+                <div>
+                    <h2>Learned Outcomes</h2>
+                    <div class="paragraph">
+                        <p>Through this project I learned to analyze user flows at a much deeper level; taking into consideration user urgency and job uses. This process also sparked an interest in researching how wearable technologies are addressing accessibility.</p>
+
+                        <p>The <span class="bold">Green P smart watch app</span> has definitely opened my eyes to the usefulness of smart watch applications!</p>
+
+                    </div>
+                </div>
+
                 <div>
                     <h2>Background</h2>
 
@@ -114,16 +124,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <p>Some struggles I faced during the design process was designing with the concept of glanceability.</p>
 
                         <p>This frame of thought had me analyze what information was critical and the most necessary to deliver to the user.. and had me repeatedly ask myself: <span class="bold">"can it be distilled further?"</span></p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2>Learned Outcomes</h2>
-                    <div class="paragraph">
-                        <p>Through this project I learned to analyze user flows at a much deeper level. This process also sparked an interest in researching how wearable technologies are addressing accessibility.</p>
-
-                        <p>This project has definitely opened my eyes to the usefulness of smart watch applications!</p>
-
                     </div>
                 </div>
             </div>

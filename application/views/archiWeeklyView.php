@@ -39,6 +39,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="projectDetails">
             <div class="summary">
                 <div>
+                    <h2>Learned Outcomes</h2>
+                    <div class="paragraph">
+                        <p>By creating <span class="bold">Archi Weekly</span>, I learned about designing and developing in a mobile-first approach and how using frameworks, such as Bootstrap, can be extremely helpful in creating fast turnaround for projects.</p>
+
+                        
+                    </div>
+                </div>
+
+                <div>
                     <h2>Background</h2>
 
                     <div class="paragraph">
@@ -92,15 +101,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <p>I didn't have many struggles or stumbles working on Archi Weekly. It was a pleasant and small scale introduction to a mobile-first design and development process. Even when there was a bug or two, I was easily able to find the answer in the documentation. It was a fun exploration of possibilities of implementing Bootstrap into my future work.</p>
 
                         <p>One disadvantage of Bootstrap I found however, was that it was difficult to really customize the predefine styling, such as buttons and the final HTML output is lengthy due to the class implementation system.</p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2>Learned Outcomes</h2>
-                    <div class="paragraph">
-                        <p>By creating Archi Weekly, I learned about the mobile first-approach and how using tools such as Bootstrap, can be extremely helpful in creating fast turnaround for projects.</p>
-
-                        
                     </div>
                 </div>
             </div>

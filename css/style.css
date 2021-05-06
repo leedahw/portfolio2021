@@ -274,6 +274,9 @@ a:link {
   font-weight: 500;
   text-decoration: none;
 }
+a:link:hover {
+  color: #6C4CB3;
+}
 
 #contact > a:link > i {
   margin-right: 0.75rem;
@@ -310,6 +313,12 @@ p.list {
 #competency-list {
   margin-left: -1rem;
   margin-bottom: 1em;
+}
+
+#contact a:link:hover {
+  transform: scale(1.1);
+  transform-origin: bottom left;
+  transition: all 300ms;
 }
 
 /*COLOR CLASS*/

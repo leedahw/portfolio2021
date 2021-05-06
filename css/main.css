@@ -222,7 +222,7 @@ nav.navbar .navToggle i {
   color: #00000029;
 }
 nav.navbar .navToggle #close {
-  display: block;
+  display: none;
   opacity: 0;
   transition: all 350ms;
   transition-timing-function: ease-in-out;
@@ -330,6 +330,15 @@ nav.navbar ul .navActive, nav.navbar ul a:hover {
   display: none;
 }
 
+#navCheckbox:checked ~ ul {
+  height: 100vh;
+}
+@media only screen and (min-width: 1000px) {
+  #navCheckbox:checked ~ ul {
+    height: 100%;
+  }
+}
+
 /*MAIN HEADER*/
 .introduction {
   margin-top: 15rem;
@@ -337,6 +346,12 @@ nav.navbar ul .navActive, nav.navbar ul a:hover {
 }
 
 /*ABOUT PAGE*/
+@media only screen and (min-width: 980px) {
+  #aboutIntro {
+    width: 80%;
+  }
+}
+
 .aboutDiv {
   display: inline-block;
   height: 100%;

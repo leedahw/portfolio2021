@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <!-- CONTACT INFO -->
       <div class="links content-wrapper extra-mt" id="contact">
-        <a class="purple" href="https://www.alanalee.me"><i aria-hidden="true" class="fas fa-link"></i> alanalee.me</a>
+        <a href="https://www.alanalee.me"><i aria-hidden="true" class="fas fa-link"></i> alanalee.me</a>
         <a href=" mailto: alana.d.lee@gmail.com"><i aria-hidden="true" class="far fa-envelope"></i> alana.d.lee@gmail.com</a>
         <a href="tel:647-206-6881"><i aria-hidden="true" class="fas fa-phone-alt"></i> 647.206.6881</a>
       </div>

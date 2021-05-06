@@ -5,8 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
   <?php $this->load->view('headerView.php');?>
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://alanalee.me/css/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- BORDERS Do not touch-->
@@ -28,9 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <main>
         <div class="introduction">
-            <h1 class="sunflora">Hi, <span class="desktopHide"><br/></span>I'm <span class="purple">Alana!</span></h1>
-            <p>I'm a UX / UI designer based just outside of Toronto, Canada with a passion for accessibility on the web!</p>
-            <p>Here is a selection of my work below! <span>&#x1F447;</span></p>
+            <h1 class="sunflora" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Hi, <span class="desktopHide"><br/></span>I'm <span class="purple">Alana!</span></h1>
+            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">I'm a UX / UI designer based just outside of Toronto, Canada with a passion for accessibility on the web!</p>
+            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">Here is a selection of my work below! <span>&#x1F447;</span></p>
         </div>
 
         <div class="worksTitle">
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php 
                 //fetchWorks here & repeat for each in db
                 foreach($wrk as $key=>$project){?>
-                    <div  class='projectDiv'>
+                    <div  class='projectDiv' data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                       <a href="<?php echo base_url('index.php/'. $project['url'])?>"class="">
                         <img class="projectThumbnail" src="<?php echo base_url();?>images/projects/thumbnails/<?php echo $project['thumbnail']?>" alt="project thumbnail"/>
                         <div>
@@ -62,8 +62,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <footer class="bg-yellow auto-margin">
     <?php $this->load->view('footerView');?>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="../js/jquery-3.6.0.min.js"></script>
-  <script src="../js/navToggle.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
